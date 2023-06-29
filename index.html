@@ -2,9 +2,20 @@
 <html lang="en">
 
 <head>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+
+    <title>Password Generator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 
 
 
@@ -13,14 +24,96 @@
 </head>
 
 <body>
+    <!--All'interno del corpo del documento, creiamo un contenitore che contiene una riga -->
 
-    <h1>Hello, world!</h1>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+
+            <!--all'interno di questa riga, creiamo una colonna di larghezza media-->
+
+            <div class="col-md-6">
+
+                <!--inseriamo una card di Bootstrap per il generatore di password-->
+
+                <div class="card">
+                    <!--La card ha un'intestazione, contenente un titolo h5 che indica "Generatore di password"!-->
+
+                    <div class="card-header">
+                        <h5 class="card-title">Generatore di password</h5>
+                    </div>
+
+
+                    <!--Il corpo della card contiene il modulo form per l'input dei dati, all'interno del modulo form creiamo una serie di campi di input per raccogliere le informazioni dall'utente-->
+
+                    <div class="card-body">
+                        <form>
+                            <!--ogni campo di input è contenuto in un elemento div con la classe form-group-->
+
+                            <div class="form-group">
+
+                                <!-- L'etichetta (<label>) associata al campo di input viene definita utilizzando l'attributo for corrispondente all'id dell'input-->
+
+                                <label for="name">Nome</label>
+
+                                <!--L'input stesso è definito con l'elemento <input>. In questo caso, abbiamo un campo di input per il nome dell'utente.-->
+
+                                <input type="text" class="form-control" id="name" placeholder="Inserisci il tuo nome">
+                            </div>
+
+                            <!--Questa parte del codice crea un altro campo di input per il cognome dell'utente-->
+
+                            <div class="form-group">
+                                <label for="surname">Cognome</label>
+                                <input type="text" class="form-control" id="surname"
+                                    placeholder="Inserisci il tuo cognome">
+                            </div>
+
+                            <!--Colore dell'utente-->
+                            <div class="form-group">
+                                <label for="color">Colore preferito</label>
+                                <input type="text" class="form-control" id="color"
+                                    placeholder="Inserisci il tuo colore preferito">
+                            </div>
+                            <!--Primo numero-->
+                            <div class="form-group">
+                                <label for="number1">Primo numero</label>
+                                <input type="number" class="form-control" id="number1"
+                                    placeholder="Inserisci il primo numero">
+                            </div>
+
+                            <!--Secondo numero-->
+                            <div class="form-group">
+                                <label for="number2">Secondo numero</label>
+                                <input type="number" class="form-control" id="number2"
+                                    placeholder="Inserisci il secondo numero">
+                            </div>
+
+                            <!-- Questo blocco di codice crea un campo di input per la password--->
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+
+                            <!-- Nel modulo form, aggiungiamo un pulsante button con la classe btn btn-primary-->
+
+                            <button type="button" class="btn btn-primary"> Genera
+                                Password</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
 
     <script type="text/javascript" src="JAVASCRIPT/javascript.js"> </script>
-
-
-
 </body>
 
 </html>
